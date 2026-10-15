@@ -1,0 +1,145 @@
+FERROLITE STUDIO NON-COMMERCIAL LICENSE
+Version 1.0, September 2026
+
+Copyright (c) 2026 FerroLite. All rights reserved.
+
+PREAMBLE
+
+  This license governs use, modification, and redistribution of the
+  FerroLite Studio software. Its terms are deliberately short:
+  everything is permitted except selling the software itself. This
+  Preamble is for explanation only and forms no part of the license
+  terms proper.
+
+  The "Program" is FerroLite Studio: the application, its source
+  code, its installer, its documentation, sample scripts, and
+  associated assets, in whole or in part.
+
+  A "Derivative Work" is any modification of, or work based upon, the
+  Program or part of it. Compiling, linking, packaging, or
+  re-branding the Program produces a Derivative Work.
+
+  "Output" is anything you author or produce WITH the Program:
+  scripts, macros, recordings, documents, data, or other works.
+  Output is never treated as a Derivative Work and remains solely
+  yours on your own terms.
+
+  "Distribution" is providing the Program or a Derivative Work to
+  any other person, by any means, with or without charge.
+
+1. GRANT OF LICENSE
+
+  1.1 The copyright holder grants every recipient of the Program a
+      worldwide, royalty-free, perpetual, non-exclusive license to
+      use, reproduce, modify, and distribute the Program and
+      Derivative Works, subject only to the conditions in this
+      license.
+
+  1.2 Use is unrestricted in scope: private, educational, and
+      professional use alike, including use inside a business and
+      use to automate or produce commercial work.
+
+  1.3 Output is excluded from this license. Nothing in this license
+      restricts what you create with the Program or how you exploit
+      it, including commercially.
+
+2. THE SINGLE RESTRICTION
+
+  2.1 You may NOT sell the Program or a Derivative Work. Selling
+      means offering, transferring, or licensing the Program or a
+      Derivative Work for a price, fee, or other consideration, as a
+      standalone product, as a paid component or bundle, as part of
+      a paid subscription or service, or through any paid
+      marketplace listing.
+
+  2.2 Charging for the Program or a Derivative Work itself is
+      prohibited in every form, including mandatory handling fees.
+
+  2.3 Nothing in this Section restricts Distribution at no charge,
+      or any fee for goods, services, or Output that is not the
+      Program or a Derivative Work. Charging for your time, your
+      training, your hosting, or your scripts written in the
+      Ferrolite language is ordinary permitted activity.
+
+3. DISTRIBUTION CONDITIONS
+
+  You may distribute the Program or a Derivative Work only if you:
+
+  3.1 include a complete copy of this license with it, unmodified;
+
+  3.2 retain all copyright and attribution notices;
+
+  3.3 cause the recipient to receive it free of charge, consistent
+      with Section 2; and
+
+  3.4 if you modified it, state clearly that you changed it and the
+      date of change.
+
+4. THIRD-PARTY COMPONENTS
+
+  4.1 The Program relies on third-party software, each governed by
+      its own license and unaffected by this one: OpenCvSharp
+      (Apache License 2.0), AvalonEdit (MIT License), and
+      Microsoft.Data.Sqlite with SQLitePCLRaw (MIT License).
+
+  4.2 Runtime driver components (ViGEmBus and HidHide, Nefarius
+      Software Solutions e.U.) are not part of the Program. They
+      are downloaded only from their official publishers and are
+      cryptographically signature-verified before installation.
+
+5. TERMINATION
+
+  5.1 This license terminates automatically and without notice if
+      you breach Section 2. Upon termination you must cease
+      Distribution of the Program and Derivative Works, and destroy
+      copies in your possession.
+
+  5.2 Breach of Sections 3 or 4 suspends your Distribution rights
+      until cured. Use of the Program is never terminated by a
+      curable breach.
+
+  5.3 Termination of one recipient does not affect the licenses of
+      others who received copies in good faith.
+
+6. NO WARRANTY
+
+  THE PROGRAM IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+  NON-INFRINGEMENT. THE ENTIRE RISK AS TO QUALITY AND PERFORMANCE
+  IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE
+  COST OF ALL NECESSARY SERVICING, REPAIR, OR CORRECTION.
+
+7. LIMITATION OF LIABILITY
+
+  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR BE
+  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+  OR CONSEQUENTIAL DAMAGES (INCLUDING LOSS OF DATA, PROFITS, OR
+  BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE) ARISING IN ANY WAY OUT OF THE USE OR
+  DISTRIBUTION OF THE PROGRAM, EVEN IF ADVISED OF THE POSSIBILITY
+  OF SUCH DAMAGE.
+
+8. ACCEPTANCE
+
+  Installing, copying, using, or distributing the Program means you
+  accept this license in full. If you do not accept it, do not
+  install, use, or distribute the Program.
+
+9. GOVERNING TERMS
+
+  9.1 This license is the entire agreement between you and the
+      copyright holder concerning the Program. Any additional terms
+      imposed by a Distributor are void as against the copyright
+      holder.
+
+  9.2 If any provision is held unenforceable, it is modified to the
+      minimum extent necessary, and the remaining provisions stay in
+      force.
+
+  9.3 This license is governed by the laws applicable at the
+      copyright holder's principal place of business, without
+      regard to conflict-of-law rules.
+
+                                                              EOF

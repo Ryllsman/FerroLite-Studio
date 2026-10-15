@@ -1,0 +1,85 @@
+FerroLite Studio - Required Drivers
+====================================
+
+WHAT THIS INSTALLER DOES
+------------------------
+FerroLite Studio is fully self-contained: the .NET runtime and all libraries
+ship next to Ferrolite.exe. You never need to install anything else for the
+app itself to run.
+
+VIRTUAL-CONTROLLER DRIVERS (downloaded and installed during setup)
+-------------------------------------------------------------------
+Scripts can emulate a gamepad that other applications see as a real device.
+Windows requires a kernel driver for that, and FerroLite cannot bundle one -
+kernel drivers must come from their vendor's signed installer. This setup
+therefore DOWNLOADS and INSTALLS them for you (select on the Components page):
+
+  1. ViGEmBus (recommended)
+     Publisher: Nefarius Software Solutions e.U.
+     Downloaded from the official GitHub release:
+       https://github.com/nefarius/ViGEmBus/releases  (v1.22.0, ~6 MB)
+     Installed silently with:  ViGEmBusSetup.exe /passive /norestart
+     Makes other apps see a GENUINE "Xbox 360 Controller".
+
+  2. HidHide (recommended - use with ViGEmBus)
+     Publisher: Nefarius Software Solutions e.U.
+     Downloaded from the official GitHub release:
+       https://github.com/nefarius/HidHide/releases  (v1.5.230, ~8 MB)
+     Installed silently with:  HidHideSetup.exe /passive /norestart
+     "Controller isolation": hides your PHYSICAL controller from every other
+     app while a FerroLite script mediates it, so the game sees exactly one
+     controller (your hands + the macro) instead of two. Safe by design: the
+     hiding is session-scoped and disappears automatically when FerroLite
+     exits, even after a crash. Your permanent HidHide configuration is never
+     modified.
+
+  3. vJoy (alternative/legacy)
+     Publisher: the vJoy project (jshafer817 fork)
+     Downloaded from the official GitHub release:
+       https://github.com/jshafer817/vJoy/releases  (v2.1.9.1, ~11 MB)
+     Installed silently with:
+       vJoySetup.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+
+WHAT YOU WILL SEE
+-----------------
+- The Components page describes each driver and its approximate size.
+- When a driver component is selected, setup prints the download URL to the
+  detail view, downloads the setup, then runs it silently.
+- If a driver is already installed, the component is skipped automatically.
+- Installing drivers may require a REBOOT - recommended after setup completes.
+
+NOTES
+-----
+- Both downloads come straight from the vendors' official GitHub releases;
+  nothing is fetched from third-party mirrors.
+- Setup verifies each downloaded installer's Authenticode signature BEFORE
+  running it (ViGEmBus and HidHide must be signed by Nefarius Software
+  Solutions, vJoy by its maintainer). A failed check aborts that driver's
+  install.
+- Internet access is required when the driver components are selected.
+- You can also install these drivers yourself at any time from the URLs above.
+- Uninstalling FerroLite Studio does NOT remove the drivers; uninstall them
+  from Windows' Apps & Features if desired.
+- Silent installs of this setup (/S) skip the driver components by default.
+  Set the environment variable FERROLITE_INSTALL_DRIVERS=1 to include them.
+
+IF YOU SKIP THE DRIVER COMPONENTS
+---------------------------------
+- Emulated (virtual) gamepad functions are unavailable.
+- Real, physically connected XInput controllers work without any driver.
+- Keyboard / mouse / clipboard / pixel / screenshot / window features need
+  no driver at all.
+
+AFTER INSTALLING A DRIVER
+-------------------------
+Restart FerroLite Studio. In a script:
+
+  print(controller_driver())                  ; e.g. "xinput+vigem+hidhide"
+  controller_passthrough(true)                ; arms the full pipeline, returns at once
+  print(controller_passthrough_status())      ; active / hid_hidden / virtual_pad
+
+With ViGEmBus + HidHide installed, controller_passthrough(true) gives you the
+complete chain: physical pad (hidden from other apps) -> FerroLite -> virtual
+Xbox 360 controller -> game. The chain disarms when the script ends (or on
+Stop / controller_passthrough(false)) — it never outlives the script that
+armed it.

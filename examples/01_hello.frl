@@ -1,0 +1,20 @@
+// ============================================================
+// 01 — Hello, FerroLite!
+// The absolute basics: variables, arithmetic, printing.
+// ============================================================
+
+print("Hello from FerroLite Studio!")
+
+let name = "macro author"
+let a = 6
+let b = 7
+
+print("Welcome, " + name)
+print("6 * 7 = " + str(a * b))
+print("pi ~ " + str(round(3.14159, 2)))
+
+if a * b == 42 {
+    print("The answer is correct.")
+} else {
+    print("Math is broken.")
+}
