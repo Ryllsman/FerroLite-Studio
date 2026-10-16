@@ -1,0 +1,36 @@
+<Project>
+
+  <!--
+    Dependency pinning.
+
+    With RestorePackagesWithLockFile enabled, every project writes a
+    packages.lock.json recording the exact resolved version and content hash of
+    every direct and transitive package. Those files are committed, so:
+
+      * a fresh clone resolves byte-identical packages to a clone by anyone
+        else, instead of whatever nuget.org happens to serve that day;
+      * the locked restore mode used by CI fails loudly if the lock files and
+        the project files ever disagree, rather than silently resolving
+        something new.
+
+    One thing to know before changing runtime identifiers: a restore is
+    graph-sensitive. If a project is restored once with a runtime identifier and
+    once without one, NuGet writes two different graphs into the same lock file,
+    and whichever run happens second breaks the other: the installer's
+    self-contained win-x64 publish used to leave a lock file that a plain locked
+    restore then rejected with NU1004.
+
+    Ferrolite.UI and Ferrolite.Core therefore declare a RuntimeIdentifiers value
+    of win-x64 in their project files, so every restore computes the same graph
+    no matter which command triggers it. Keep those declarations in sync with
+    the self-contained publish that produces a release (the staging script in
+    the project repository's installer folder).
+
+    After deliberately changing a package version, regenerate the lock files
+    with a forced restore (see BUILD.md) and commit the result.
+  -->
+  <PropertyGroup>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+
+</Project>

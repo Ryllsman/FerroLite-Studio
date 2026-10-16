@@ -1,0 +1,25 @@
+# Normalize line endings on commit; check out native on each platform.
+* text=auto
+
+# Source and docs: LF in the repository.
+*.cs        text diff=csharp
+*.xaml      text
+*.csproj    text
+*.slnx      text
+*.md        text
+*.txt       text
+*.frl       text
+*.nsi       text
+*.nsh       text
+
+# Windows scripts and project files must keep CRLF on checkout.
+*.ps1       text eol=crlf
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+
+# Binary — never diff or convert.
+*.png       binary
+*.ico       binary
+*.exe       binary
+*.dll       binary
+*.pdb       binary

@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Ferrolite.Core.Tests/Ferrolite.Core.Tests.csproj" />
+  <Project Path="Ferrolite.Core/Ferrolite.Core.csproj" />
+  <Project Path="Ferrolite.UI/Ferrolite.UI.csproj" />
+</Solution>
